@@ -17,13 +17,13 @@ public class Servlet_Prac170701001 extends HttpServlet {
 	
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) 
 			throws ServletException, IOException {
-		System.out.println("doGet");
+		System.out.println("doGet!!");
 		
 		response.setContentType("text/html; charset=UTF-8");
 			//設定回應內容類型
 		try(PrintWriter writer = response.getWriter()){
 			//取得回應輸出物件
-			writer.write("Hello, World");
+			writer.write("Hello, World!!");
 			writer.flush();
 		}
 	}
