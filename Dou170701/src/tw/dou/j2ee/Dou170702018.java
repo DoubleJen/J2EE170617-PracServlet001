@@ -14,8 +14,7 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.Part;
 
 
-@WebServlet("/Dou170702017")
-@MultipartConfig
+@WebServlet("/Dou170702018")
 public class Dou170702018 extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        

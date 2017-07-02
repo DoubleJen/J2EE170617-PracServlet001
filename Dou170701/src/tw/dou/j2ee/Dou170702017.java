@@ -15,7 +15,6 @@ import javax.servlet.http.Part;
 
 
 @WebServlet("/Dou170702017")
-@MultipartConfig
 public class Dou170702017 extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        

@@ -14,8 +14,7 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.Part;
 
 
-@WebServlet("/Dou170702016?name=Brad&status=OK")
-@MultipartConfig
+@WebServlet("/Dou170702016")
 public class Dou170702016 extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
@@ -27,7 +26,7 @@ public class Dou170702016 extends HttpServlet {
 			//人家丟上來的字元為UTF-8
 		
 		//轉向
-		RequestDispatcher dispatcher = request.getRequestDispatcher("Dou170702017");
+		RequestDispatcher dispatcher = request.getRequestDispatcher("Dou170702017?name=Brad&status=OK");
 		RequestDispatcher dispatcher2 = request.getRequestDispatcher("Dou170702018");
 
 		//include
