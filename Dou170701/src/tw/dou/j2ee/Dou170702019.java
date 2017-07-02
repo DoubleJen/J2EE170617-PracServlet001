@@ -1,5 +1,5 @@
 package tw.dou.j2ee;
-//019==>018
+//019==>018 MVC的精神
 import java.io.IOException;
 import java.io.PrintWriter;
 

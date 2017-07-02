@@ -1,4 +1,5 @@
 package tw.dou.j2ee;
+////I am View(M"V"C)
 import java.io.BufferedInputStream;
 import java.io.File;
 import java.io.FileInputStream;
@@ -30,6 +31,7 @@ public class Dou170702022 extends HttpServlet {
 		//Load Template View
 		String html = loadView("mycal.html");
 		html = String .format(html, x, y, result);
+									//x, y, result==>mycal.html要有三個%s
 		out.print(html);
 	}
 	

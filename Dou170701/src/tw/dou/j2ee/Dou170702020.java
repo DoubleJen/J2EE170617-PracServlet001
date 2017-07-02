@@ -23,7 +23,7 @@ public class Dou170702020 extends HttpServlet {
 		if(x == null) x="0";
 		if(y == null) y="0";
 		
-		// 1. Model處理
+		// 1. Model處理(邏輯所在)
 		Dou170702021 model = new Dou170702021(x, y);
 		int result = model.add();
 		
