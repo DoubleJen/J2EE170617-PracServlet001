@@ -11,8 +11,8 @@ import javax.servlet.http.HttpServletResponse;
 
 
 @WebServlet("/Servlet_Prac170701001")
-			//此處路徑需與網址一致
 			//http://localhost:8080/Servlet170701_Prac/Prac.php
+			//如果請求的URL是『Prac.php』，則由『Servlet_Prac170701001』提供服務
 public class Servlet_Prac170701001 extends HttpServlet {
 	
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) 
@@ -23,7 +23,8 @@ public class Servlet_Prac170701001 extends HttpServlet {
 			//設定回應內容類型
 		try(PrintWriter writer = response.getWriter()){
 			//取得回應輸出物件
-			writer.write("Hello, World!!");
+			writer.write("Hello, World & Java!!");
+			writer.println("Hello, Double");
 			writer.flush();
 		}
 	}
