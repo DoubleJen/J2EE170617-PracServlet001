@@ -10,4 +10,9 @@
     <param-name>upload-path</param-name>
     <param-value>C:\Users\Yujen\git\Servlet170701_Prac\WebContent\upload_170702</param-value>
   </context-param>
+  <context-param>
+  	<description>畫面樣板檔案放置路徑</description>
+  	<param-name>template-path</param-name>
+  	<param-value>C:\Users\Yujen\git\Servlet170701_Prac\WebContent\templates</param-value>
+  </context-param>
 </web-app>
