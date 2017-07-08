@@ -25,8 +25,7 @@ public class Servlet_Prac170702022 extends HttpServlet {
 		String y = (String)request.getAttribute("y");
 		int result =  (Integer)request.getAttribute("result");
 		
-//		out.println(x + " + " + y + " = " + result );
-		
+ 		
 		String html = loadView("mycal170702.html");
 //		out.print(html);
 //		out.print("<hr>");
