@@ -34,13 +34,13 @@ public class Servlet_PracMain170702S extends HttpServlet {
 			Connection conn = 
 			DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/doubleprac", prop);
 			
-			PreparedStatement pstmt = conn.prepareStatement("select * from cust2");
-			rs = pstmt.executeQuery();
-			
 			String delid =  request.getParameter("delid");
 			if(delid !=  null) {
 				conn.createStatement().executeUpdate("delete from cust2 where id = " + delid );
 			}
+			
+			PreparedStatement pstmt = conn.prepareStatement("select * from cust2");
+			rs = pstmt.executeQuery();
 			
 		} catch (Exception e) {
 			System.out.println(e);
@@ -67,7 +67,7 @@ public class Servlet_PracMain170702S extends HttpServlet {
 					out.println("<td>" + id + "</td>");
 					out.println("<td>" + account + "</td>");
 					out.println("<td>" + passwd + "</td>");
-					out.println("<td><a href='?delid=" + id + "' onclick='return confirm(\"Delete" + account + " \");'>DELETE</a></td>");
+					out.println("<td><a href='?delid=" + id + "' onclick='return confirm(\"Delete" + account + "?\");'>DELETE</a></td>");
 					out.println("</tr>");
 				}
 			}
