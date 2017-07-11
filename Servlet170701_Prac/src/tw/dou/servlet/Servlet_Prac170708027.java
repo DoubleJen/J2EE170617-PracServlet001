@@ -1,6 +1,6 @@
 package tw.dou.servlet;
 //Use Servlet to read Image & modify
-//
+//驗證碼歪斜設計
 
 import java.awt.Color;
 import java.awt.Font;
