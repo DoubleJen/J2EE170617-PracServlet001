@@ -1,6 +1,5 @@
 <!-- 
-	Member Query & Delete 073 <=> Member Update 074
-
+	Member Added07401 <=> Member Query & Delete 073 <=> Member Update 074
  -->
 
 <%@ page language="java" contentType="text/html; charset=UTF-8"
@@ -24,6 +23,17 @@
 <body>
 	<h1>Member Query Table</h1>
 	<hr>
+	<br>
+	
+	<h2><a href="JSP_Prac17071507401.jsp">Add New Member</a></h2>
+	
+	<!-- Delete -->
+	<c:if test="${!empty param.delid }">
+		<sql:update var="delcount">
+			delete from member where id = ?
+			<sql:param>${param.delid }</sql:param>
+		</sql:update>
+	</c:if>
 	
 	<!-- select All Data from SQLtable "member" -->
 	<sql:query var="result">select * from member</sql:query>
@@ -51,15 +61,6 @@
 		</c:forEach>
 		
 	</table>
-	
-	<!-- Delete -->
-	<c:if test="${!empty param.delid }">
-		<sql:update var="delcount">
-			delete from member where id = ?
-			<sql:param>${param.delid }</sql:param>
-		</sql:update>
-	</c:if>
-	
 	
 </body>
 </html>

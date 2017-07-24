@@ -1,8 +1,20 @@
+<!-- 
+	Member Added07401 <=> Member Query & Delete 073 <=> Member Update 074
+ -->
+
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ page errorPage="errorPage.jsp" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/sql" prefix="sql" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ page import="tw.dou.servlet.BCrypt" %>
+
+<%
+	String passwd = (String)pageContext.getAttribute("passwd");
+	String salt = BCrypt.gensalt();
+	String hashpasswd = BCrypt.hashpw(passwd, salt);
+	request.setAttribute("hashpasswd", hashpasswd);
+%>
 	
 <!-- Test ID is null or not, if null then return-->
 <c:if test="${empty param.editid and empty param.id }">
@@ -20,7 +32,7 @@
 	<sql:update var="updatecount">
 		update member set account=?, passwd=?, realname=? where id=?
 		<sql:param>${param.account }</sql:param>
-		<sql:param>${param.passwd }</sql:param>
+		<sql:param>${hashpasswd }</sql:param>
 		<sql:param>${param.realname }</sql:param>
 		<sql:param>${param.id }</sql:param>
 	</sql:update>
