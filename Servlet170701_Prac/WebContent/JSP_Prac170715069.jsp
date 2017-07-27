@@ -2,9 +2,9 @@
 	國際化(i18n) v.s. 語系
 	
 	JSTL格式標籤
-	<fmt:setBundle/> & <fmt:message/>
-	<fmt:setTimeZone/> & <fmt:formatDate/>
-	<fmt:formatNumber/>
+	<fmt:setBundle> & <fmt:message>
+	<fmt:setTimeZone> & <fmt:formatDate>
+	<fmt:formatNumber>
  --%>
 
 <%@page import="java.util.Date"%>
@@ -38,7 +38,7 @@
 	
 	
 	<%--
-		<fmt:setBundle/> & <fmt:message/>
+		<fmt:setBundle> & <fmt:message>
 		The <fmt:setBundle> tag is used to load a resource bundle 
 		and stores it in the named scoped variable 
 		or the bundle configuration variable.
@@ -56,7 +56,7 @@
 	
 	<%--
 		時區 & 日期時間
-		<fmt:setTimeZone/> & <fmt:formatDate/>
+		<fmt:setTimeZone> & <fmt:formatDate>
 	 --%>
 	<%
 		Date now = new Date();

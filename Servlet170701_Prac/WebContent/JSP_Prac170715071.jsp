@@ -1,10 +1,10 @@
 <%--
 	JSTL SQL標籤
 	<sql:setDataSource driver="" url="" user="" password=""/>
-	<sql:query/>
+	<sql:query>
 		select * from member where account=?
-		<sql:param>XXXX<sql:param/>
-	<sql:query/> 
+		<sql:param>XXXX</sql:param>
+	</sql:query> 
  --%>
 
 <%@ page language="java" contentType="text/html; charset=UTF-8"

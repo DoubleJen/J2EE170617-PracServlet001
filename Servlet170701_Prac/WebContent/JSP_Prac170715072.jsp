@@ -1,11 +1,11 @@
 <%--
 	JSTL SQL標籤
-	<sql:update/>
+	<sql:update>
 		insert into member(account, passwd, realname) values(?, ?, ?)
-		<sql:param>XXXX<sql:param/>
-		<sql:param>XXXX<sql:param/>
-		<sql:param>XXXX<sql:param/>
-	<sql:query/> 
+		<sql:param>XXXX</sql:param>
+		<sql:param>XXXX</sql:param>
+		<sql:param>XXXX</sql:param>
+	</sql:update>	
  --%>
 
 <%@ page language="java" contentType="text/html; charset=UTF-8"
